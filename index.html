@@ -316,6 +316,10 @@ html, body {
   margin-top: -8px; margin-bottom: 4px;
 }
 .modal-row { display: flex; gap: 10px; }
+@media (max-width: 400px) {
+  .modal { padding: 32px 18px 22px; }
+  .modal-row { flex-direction: column; gap: 14px; }
+}
 .modal-field {
   display: flex; flex-direction: column; gap: 6px; flex: 1;
 }
