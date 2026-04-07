@@ -194,6 +194,22 @@ html, body {
 }
 .link-btn.locked::after { display: none; }
 
+/* featured primary CTA */
+.link-btn.featured {
+  border-color: var(--v3);
+  background: rgba(139,0,255,.13);
+  animation: fadeUp .6s ease both, featuredPulse 3s ease-in-out infinite;
+}
+.link-btn.featured:hover {
+  background: rgba(139,0,255,.22);
+  box-shadow: 0 8px 36px rgba(139,0,255,.4), inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+@keyframes featuredPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139,0,255,0), 0 0 18px rgba(139,0,255,.2); }
+  50%       { box-shadow: 0 0 0 4px rgba(139,0,255,.12), 0 0 28px rgba(139,0,255,.35); }
+}
+
 .link-icon {
   width: 42px; height: 42px; border-radius: 11px;
   background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
@@ -249,6 +265,7 @@ html, body {
 .link-btn:nth-child(2) { animation-delay: .43s; }
 .link-btn:nth-child(3) { animation-delay: .51s; }
 .link-btn:nth-child(4) { animation-delay: .59s; }
+.link-btn:nth-child(5) { animation-delay: .67s; }
 
 /* ── Footer ── */
 .footer {
@@ -323,27 +340,40 @@ html, body {
   <div class="links">
 
     <!-- Free AI Tool -->
-    <a class="link-btn" href="https://manus.im/invitation/VQWT4EUM7DXWPW?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank" rel="noopener"
+    <a class="link-btn featured" href="https://manus.im/invitation/VQWT4EUM7DXWPW?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank" rel="noopener"
        style="--accent-a:#5b00c8;--accent-b:#8b00ff">
       <div class="link-icon">⚡</div>
       <div class="link-text">
-        <span class="link-title">Free AI Tool</span>
-        <span class="link-sub">My #1 AI recommendation</span>
+        <span class="link-title">Unlock My #1 AI Assistant</span>
+        <span class="link-sub">Free trial — no credit card needed</span>
       </div>
-      <span class="badge badge-live">Live</span>
+      <span class="badge badge-live">Free</span>
       <span class="arrow">›</span>
     </a>
 
-    <!-- Skool — coming soon -->
-    <div class="link-btn locked"
-         style="--accent-a:#1a0040;--accent-b:#3d0080">
+    <!-- Game -->
+    <a class="link-btn" href="https://neonmergegame.online/" target="_blank" rel="noopener"
+       style="--accent-a:#004060;--accent-b:#00aacc">
+      <div class="link-icon">🕹️</div>
+      <div class="link-text">
+        <span class="link-title">Neon Merge</span>
+        <span class="link-sub">My free browser puzzle game</span>
+      </div>
+      <span class="badge badge-live">Play</span>
+      <span class="arrow">›</span>
+    </a>
+
+    <!-- Skool — waitlist -->
+    <a class="link-btn" href="mailto:eliayermakov228@outlook.com?subject=Skool%20Waitlist%20-%20yermakov.ai&body=Hey%20Elia%2C%20I%27d%20love%20to%20join%20the%20waitlist%20for%20your%20Skool%20community!"
+       style="--accent-a:#1a0040;--accent-b:#3d0080">
       <div class="link-icon">🎓</div>
       <div class="link-text">
         <span class="link-title">Skool Community</span>
-        <span class="link-sub">AI courses & community</span>
+        <span class="link-sub">AI courses & community — coming soon</span>
       </div>
-      <span class="badge badge-soon">🚧 Soon</span>
-    </div>
+      <span class="badge badge-soon">Join Waitlist</span>
+      <span class="arrow">›</span>
+    </a>
 
     <!-- Website — coming soon -->
     <div class="link-btn locked"
