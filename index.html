@@ -526,7 +526,7 @@ async function submitWaitlist() {
   const btn = document.querySelector('.modal-submit');
   btn.textContent = 'Sending…'; btn.disabled = true;
   try {
-    await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    await fetch('https://formspree.io/f/meepnrda', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ firstName: first, lastName: last, email })
